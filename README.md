@@ -3,7 +3,7 @@ Automatic workspace creation script for i3 tiling window manager (http://i3wm.or
 
 Suggested usage: 
 
-Download the repo, and create a symlink in `$HOME/.local/bin`:
+Download the repo, and create a symlink in `$HOME/.local/bin` (or your preferred directory that is on the `$PATH`):
 
     ln -s /path/to/the/repo $HOME/.local/bin/i3-new-workspace
 
