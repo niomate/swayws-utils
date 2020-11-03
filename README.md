@@ -1,8 +1,8 @@
 # i3-new-workspace
-Automatic workspace creation script for i3 tiling window manager (http://i3wm.org/)
-Adapted for swaywm.
+Automatic workspace creation script for i3 tiling window manager (http://i3wm.org/), adapted for `swaywm`.
 
 Suggested usage: 
+
 Download the repo, and create a symlink in `$HOME/.local/bin`:
 
     ln -s /path/to/the/repo $HOME/.local/bin/i3-new-workspace
