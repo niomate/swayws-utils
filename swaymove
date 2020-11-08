@@ -1,0 +1,31 @@
+#!/bin/env python
+import asyncio
+import swayipc
+import sys
+
+
+async def main():
+
+    workspaces = await swayipc.get_workspaces()
+
+    focused = 0
+
+    for ws in workspaces:
+        if ws['focused']:
+            focused = ws['num']
+
+    move = 'next'
+    if len(sys.argv) > 1:
+        move = sys.argv[1]
+
+    if move == 'next':
+        new_ws = min(focused + 1, 10)
+    elif move == 'prev':
+        new_ws = max(focused - 1, 1)
+    else:
+        print('Invalid command. Expected "next" or "prev"', file=sys.stderr)
+        return 1
+
+    await swayipc.run_command(f'move container to workspace {new_ws}')
+
+asyncio.run(main())
