@@ -1,0 +1,2 @@
+- Try to make it work for workspace groups as well
+- Extract information about maximum workspace index from config file
